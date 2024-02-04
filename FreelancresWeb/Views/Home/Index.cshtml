@@ -1,0 +1,54 @@
+﻿@using FreelancresWeb.Models;
+<div class="wrapper">
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">User</th>
+
+                </tr>
+            </thead>
+            @foreach (var item in ViewBag.User)
+            {
+                <tbody>
+                    <tr>
+                        <td>@item.UserName</td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+
+        @using (Html.BeginForm("Insert_PostBack", "Home", null, FormMethod.Post, true, new { id = "formName" }))
+        {
+            <label>Insert User</label>
+            <br />
+            <input type="text" name="userName" />
+            <input type="submit" />
+        }
+        <br />
+        <br/>
+        @using (Html.BeginForm("Update_PostBack", "Home", null, FormMethod.Post, true, new { id = "formName" }))
+        {
+            <label>Update User</label>
+            <br />
+            <label>Old Name :</label>
+            <input type="text" name="oldName" />
+            <br />
+            <br />
+
+            <label>New Name :</label>
+            <input type="text" name="newName" />
+            <input type="submit" />
+        }
+        <br />
+        <br/>
+        @using (Html.BeginForm("Delete_PostBack", "Home", null, FormMethod.Post, true, new { id = "formName" }))
+        {
+            <label>Delete User</label>
+            <br />
+            <label>User Name :</label>
+            <input type="text" name="userName" />
+            <input type="submit" />
+            <br />
+            <br />
+        }
