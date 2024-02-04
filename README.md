@@ -1,7 +1,7 @@
 # Web Application Architecture # 
 
 ## Web API: ##
-  - **.Net Core Web API Project File**
+  - <bold>.Net Core Web API Project File</bold>
   - Includes functions such as 'Get', 'Post', 'Put', 'Delete'
   
 ## Database: ##
